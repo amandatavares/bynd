@@ -16,5 +16,8 @@
       <a href="/vote/{{ $movie->id }}">Votar!</a>
     @endforeach
 
+    <br>
+
+    <!-- {{ HTML::image('/assets/img/iron-man.jpg', 'The iron man') }} -->
 
 @endsection

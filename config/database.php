@@ -119,7 +119,7 @@ return [
         'default' => [
             'host'     => env('REDIS_HOST', 'localhost'),
             'password' => env('REDIS_PASSWORD', ''),
-            'port'     => env('REDIS_PORT', 3306),
+            'port'     => env('REDIS_PORT', 3307),
             'database' => 'application',
         ],
 
