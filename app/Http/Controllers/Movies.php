@@ -14,6 +14,7 @@ class Movies extends Controller
     //
     function index(){
       // liste todos os filmes.
+      // $movie = Movie::orderBy('id','desc')->get()
       $movie = Movie::all();
       return view('movies/index',['movies'=>$movie]);
     }
