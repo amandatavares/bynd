@@ -1,0 +1,116 @@
+@media (max-width: 767px){
+	.carousel .row .span3 {
+	display: block;
+	float: left;
+	width: 25%;
+	margin-left: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+}
+
+body {
+  /*background: url(assets/img/cover.jpg) no-repeat center center fixed;*/
+  
+  background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("/assets/img/cover.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #FFF;
+
+}
+
+.bold {
+  font-weight: bold;
+}
+.container{
+  background: #000000;
+  background: rgba(0, 0, 0, 0.82);
+  padding-top: 10px;
+}
+.navbar-inverse{
+  background-color: #151515 !important;
+}
+/*.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: #151515 !important;
+  border-bottom: 2px solid #ccc;
+}*/
+.nav > li.active > a,
+.nav > li.active > a:hover,
+.nav > li.active > a:focus {
+  background-color: #151515 !important;
+  border-bottom: 2px solid #ccc;
+}
+
+.caption p {
+  width: 100%; // or you could use percentage value for responsive layout
+  min-height: 18%;
+  height: 18% !important;  
+  overflow: auto;
+}
+.thumbnail-light{
+  background:rgba(255, 255, 255, 0.9) !important;   
+}
+.thumbnail-light .caption{
+  color:#000;
+}
+.thumbnail img {
+  width: 200px;
+  height: 250px;
+  cursor: pointer;
+}
+/*.thumbnail-dark{
+  background: rgba(0, 0, 0, 1) !important; 
+  border-color: #000; 
+}
+.thumbnail-dark .caption{
+  color: #FFF !important;
+}*/
+.carousel{
+  padding-bottom: 2%;
+}
+.carousel-control {
+  height: 100%;
+  margin-top: 0px;
+  border-radius: 0;
+  border: 0;
+  top: auto;
+  bottom: 15px;
+  text-align: center;
+}
+.carousel-indicators{
+  bottom: 0;
+}
+.alias {
+  margin-top: 100%;
+  bottom: 50%;
+  margin-left: 15%;
+}
+.page-header {
+  margin-top: 20px;
+  text-align: center;
+}
+.page-header h2 {
+    display: inline-block;
+    margin: 0 0 0px 0;    
+    color: #FFF;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+.carousel .carousel-control { visibility: hidden; }
+.carousel:hover .carousel-control { visibility: visible; }
+
+.modal-header, .modal-footer {
+  background-color: #000;
+}
+.modal-body {
+  color: #000;
+}
+.rank-poster {
+  width: 60px;
+  height: 60px;  
+}
+
+

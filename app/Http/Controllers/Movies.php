@@ -33,4 +33,8 @@ class Movies extends Controller
       return redirect('/movies');
       //return Redirect::to('/movies');//redirect()->route('/movies');
     }
+    function show_votes(){
+      $votes = Vote::orderBy('n_votes','desc')->get();
+      return view('movies/rank',['votes'=>$votes]);
+    }
 }

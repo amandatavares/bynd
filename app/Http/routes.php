@@ -15,6 +15,7 @@ Route::get('/','Movies@index');
 
 Route::get('/movies','Movies@index');
 Route::get('vote/{id}','Movies@vote');
+Route::post('/show_votes','Movies@show_votes');
 /*
 |--------------------------------------------------------------------------
 | Application Routes

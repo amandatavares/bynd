@@ -8,6 +8,6 @@ class Movie extends Model
 {
   //Relationship with votes
   public function votes() {
-    return $this->hasMany('Vote');
+    return $this->hasMany('App\Vote');
   }
 }
