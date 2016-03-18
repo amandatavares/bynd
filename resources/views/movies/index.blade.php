@@ -24,7 +24,7 @@
          		<div class="item <?= ($i==0) ? 'active' : '' ?>">
          			<div class="col-sm-5">
 	                    <div class="thumbnail thumbnail-light">
-                            <img src="assets/{{$movies[$i]->file_path}}" onclick="vote({{$movies[$i]->id}})">
+                            <img class="vote" src="assets/{{$movies[$i]->file_path}}" onclick="vote({{$movies[$i]->id}})<?=($i+2==count($movies)) ? ', showRanking()' : ''?> ">
 	                        <div class="caption">
 	                            <h3 class="bold text-center">{{ $movies[$i]->name }}</h3>
 
@@ -42,7 +42,7 @@
 	                </div>
                		 <div class="col-sm-5">
                         
-	                    <div class="thumbnail thumbnail-light"><img src="assets/{{$movies[$i+1]->file_path}}" onclick="vote({{$movies[$i+1]->id}}) ">
+	                    <div class="thumbnail thumbnail-light"><img src="assets/{{$movies[$i+1]->file_path}}" onclick="vote({{$movies[$i+1]->id}})<?=($i+2==count($movies)) ? ', showRanking()' : ''?> ">
 	                        <div class="caption">
 	                            <h3 class="bold text-center">{{ $movies[$i+1]->name }}</h3>
 
@@ -57,27 +57,41 @@
         </div>         
     </div>
 
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#rank">Open Modal</button>
-
-<!-- Modal -->
+<!-- Modal Rank-->
 <div id="rank" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
 
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">RankedIn Melhores Filmes</h4>
+        <h3 class="modal-title bold"><i class="fa fa-star"></i>&nbsp; Melhores Filmes</h3>
+        <p>Rank dos melhores filmes segundo os espectadores.</p>  
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!-- content carregado via post da pagina rank.blade.php, atualizado via ajax. script em custom.js -->
       </div>
     </div>
-
   </div>
 </div>    
+
+<!-- Modal Welcome-->
+<div id="welcome" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h2 class="modal-title bold">RankedIn - Escolha os melhores filmes!</h2>
+      </div>
+      <div class="modal-body">
+        <img src="/assets/img/star.png" class="star">        
+          <h4>O melhor do cinema está aqui! No RankedIn você seleciona os filmes que você mais gosta, tendo de escolher 10 filmes da lista dada. Basta clicar na imagem e seu voto será contabilizado!</h4>
+          <h4>No final, veja o Rank do melhores filmes na opnião dos espectadores. Está pronto? Comece a votar nos seus filmes preferidos!</h4>
+      </div>
+    </div>
+  </div>
+</div>
 
 @endsection

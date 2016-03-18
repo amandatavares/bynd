@@ -1,16 +1,26 @@
-
+<div class="container-fluid">          
+  <table class="table table-responsive">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Título</th>
+        <th>Votos</th>
+      </tr>
+    </thead>
+    <tbody>
 <!-- acessando n -->
+<?php $rank=1;?>
 @foreach ($votes as $vote)
-<div class="row">
-  <div class="col-sm-4">
-  	<img src="assets/{{$vote->movie()->first()->file_path}}" class="rank-poster">
-  </div>
-  <div class="col-sm-4">
-  	<!-- movie é um array. o first acessa o primeiro elemento do array movie. so entao posso acessar o nome, elemnto contido em movie -->
-  	<h4 class="bold">{{ $vote->movie()->first()->name }}</h4>
-  </div>
-  <div class="col-sm-4">
-  	<h4 class="bold">{{ $vote->n_votes }}</h4>
-  </div>
+      <tr>
+        <td><span class="bold">#{{$rank}}</span></td>
+        <td>
+          <img src="assets/{{$vote->movie()->first()->file_path}}" class="rank-poster">
+          <h4 class="bold">{{ $vote->movie()->first()->name }}</h4>
+        </td>
+        <td><h4 class="bold">{{ $vote->n_votes }}</h4></td>
+      </tr>
+  <?php $rank++;?>
+@endforeach     
+    </tbody>
+  </table>
 </div>
-@endforeach

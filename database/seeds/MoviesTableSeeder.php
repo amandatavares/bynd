@@ -118,7 +118,7 @@ class MoviesTableSeeder extends Seeder
         Movie::create([
             'name' => 'A Lista de Schindler',
             'description'  => '(1993) A inusitada história de Oskar Schindler (Liam Neeson), um sujeito oportunista, sedutor, "armador", simpático, comerciante no mercado negro, mas, acima de tudo, um homem que se relacionava muito bem com o regime nazista, tanto que era membro do próprio Partido Nazista (o que não o impediu de ser preso algumas vezes, mas sempre o libertavam rapidamente, em razão dos seus contatos). No entanto, apesar dos seus defeitos, ele amava o ser humano e assim fez o impossível, a ponto de perder a sua fortuna mas conseguir salvar mais de mil judeus dos campos de concentração. ',
-            'file_path' => 'img/madmax.jpg'
+            'file_path' => 'img/schindler.jpg'
         ]);
 
         // Exibe uma informação no console durante o processo de seed
