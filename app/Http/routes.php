@@ -11,10 +11,12 @@
 |
 */
 
+// Se usuário estiver no index ou em /movies, retona o index
 Route::get('/','Movies@index');
-
 Route::get('/movies','Movies@index');
+// Voto via get chama função vote no Model
 Route::get('vote/{id}','Movies@vote');
+// Manda votos para o ranking via POST enquanto os filmes são votados
 Route::post('/show_votes','Movies@show_votes');
 /*
 |--------------------------------------------------------------------------

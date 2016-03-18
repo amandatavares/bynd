@@ -22,6 +22,12 @@
         <script type="text/javascript" src="{{ asset('assets/js/jquery-1.12.1.js') }}"></script>
         <script type="text/javascript" src="{{ asset('assets/js/bootstrap.js') }}"></script>
         <script type="text/javascript" src="{{ asset('assets/js/custom.js') }}"></script>
-        
+        <script type="text/javascript">
+        $(function(){
+            $('#rank').on('hidden.bs.modal', function () {
+                window.location='';     
+            })
+        });
+        </script>
     </body>
 </html>

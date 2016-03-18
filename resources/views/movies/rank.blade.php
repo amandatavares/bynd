@@ -8,9 +8,11 @@
       </tr>
     </thead>
     <tbody>
-<!-- acessando n -->
-<?php $rank=1;?>
-@foreach ($votes as $vote)
+<!-- para ditar a posição no rank -->
+<?php $rank=1;?> 
+<!-- Pode usar para cada voto porque está relacionado com filmes -->
+@foreach ($votes as $vote) 
+      <!-- movie() tende a retorna um array. Pego o primeiro elemento deste (nesse caso, o unico) e acesso o desejado (path, name...) -->
       <tr>
         <td><span class="bold">#{{$rank}}</span></td>
         <td>

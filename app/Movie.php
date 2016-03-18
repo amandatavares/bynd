@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Movie extends Model
 {
-  //Relationship with votes
+  //Relacionamento com votos. Um filme tem muitos votos.
   public function votes() {
     return $this->hasMany('App\Vote');
   }

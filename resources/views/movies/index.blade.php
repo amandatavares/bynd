@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Index')
+@section('title', 'Vote')
 
 @section('sidebar')
     @parent    
@@ -14,17 +14,19 @@
     <div id="myCarousel" class="carousel slide">
         <!-- Indicators -->
         <ol class="carousel-indicators">
+          <!-- Para mostrar o carousel-indicators. Laço pega a lista de filmes (20)/2. Adiciona o active na primeira, e depois adiciona no slide que o usuario estiver -->
         	@for($j=0;$j<count($movies)/2;$j++)
-           		 <li data-target="#myCarousel" data-slide-to="{{$j}}" class="<?= ($j==0) ? 'active' : '' ?>"></li>   
-            @endfor         
+           	<li data-target="#myCarousel" data-slide-to="{{$j}}" class="<?= ($j==0) ? 'active' : '' ?>"></li>   
+          @endfor         
         </ol>
         <!-- Carousel items -->        
         <div class="carousel-inner" role="movielist">
+          <!-- Pega a lista de filmes e itera para gerar 10 filmes aparecendo de 2 em 2 -->
          	@for($i=0;$i<count($movies);$i=$i+2)
          		<div class="item <?= ($i==0) ? 'active' : '' ?>">
          			<div class="col-sm-5">
-	                    <div class="thumbnail thumbnail-light">
-                            <img class="vote" src="assets/{{$movies[$i]->file_path}}" onclick="vote({{$movies[$i]->id}})<?=($i+2==count($movies)) ? ', showRanking()' : ''?> ">
+	                    <div class="thumbnail thumbnail-light"> 
+                            <img class="vote" src="assets/{{$movies[$i]->file_path}}" onclick="vote({{$movies[$i]->id}})<?=($i+2==count($movies)) ? ', showRanking()' : ''?> "> <!-- Checa se está na ultima volta. Se estiver, mostra o Ranking de Filmes-->
 	                        <div class="caption">
 	                            <h3 class="bold text-center">{{ $movies[$i]->name }}</h3>
 

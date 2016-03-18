@@ -43,9 +43,9 @@ body {
 }
 .caption p {
   width: 100%;
-  min-height: 18%;
-  height: 18% !important;  
-  overflow: auto;
+  max-height: 100px;
+  height: 100px;  
+  overflow-y: auto;
 }
 .thumbnail {
   border-color: #F4645F;
