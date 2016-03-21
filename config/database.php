@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -118,8 +118,8 @@ return [
 
         'default' => [
             'host'     => env('REDIS_HOST', 'localhost'),
-            'password' => env('REDIS_PASSWORD', ''),
-            'port'     => env('REDIS_PORT', 3306),
+            'password' => env('REDIS_PASSWORD', '123'),
+            'port'     => env('REDIS_PORT', 5432),
             'database' => 'application',
         ],
 
